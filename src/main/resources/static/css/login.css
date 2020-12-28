@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+margin: 0;
+padding: 0;
+
+}
+
+body {
+	background: #fae2b6;
+	
+}
+
+.login {
+	background-image: url("https://media.istockphoto.com/vectors/design-of-modern-home-office-designer-workplace-vector-id1135379897");
+	 background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.loginform {
+	/* padding: 15px; */
+	background-color: white;
+	width:225px;
+	height: 300px;
+	margin: auto;
+	margin-top: 75px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px gray;
+}
+
+h3{
+	background-color: black;
+	padding: 6px;
+	border-radius: 10px 10px 0 0;
+}
+
+nav {
+	background-color:#F5F7F8;
+}

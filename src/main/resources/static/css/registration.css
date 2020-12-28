@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+* {
+margin: 0;
+padding: 0;
+
+}
+
+body {
+	
+	background-image: url("https://media.istockphoto.com/photos/young-man-composing-music-in-bedroom-picture-id674646744");
+	 background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.registerform {
+	height:600px;
+	width:200px;
+	border: 1px solid red;
+	margin: auto;
+}
+

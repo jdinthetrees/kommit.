@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+margin: 0;
+padding: 0;
+
+}
+
+body {
+	background: #fae2b6;
+	
+}
+
+h3{
+	background-color: black;
+	padding: 6px;
+	border-radius: 10px 10px 0 0;
+}
+
+nav {
+	background-color:#F5F7F8;
+}
+
+
+
+.editform {
+
+	background-color: white;
+	width:225px;
+	height: 430px;
+	margin: auto;
+	margin-top: 75px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px gray;
+}
+
+input, select{
+	margin-top: 15px;
+}
+
+.edit {
+	background-color: #8DC53F;
+	border-radius: 10px;
+}

@@ -8,16 +8,34 @@ padding: 0;
 
 body {
 	
-	background-image: url("https://media.istockphoto.com/photos/young-man-composing-music-in-bedroom-picture-id674646744");
+	background-image: url("https://media.istockphoto.com/vectors/set-of-tools-and-materials-for-handmade-jewelry-beads-accessories-vector-id1153437282?s=2048x2048");
 	 background-repeat: no-repeat;
   background-size: cover;
 }
 
+h3{
+	background-color: black;
+	padding: 6px;
+	border-radius: 10px 10px 0 0;
+}
+
 
 .registerform {
-	height:600px;
-	width:200px;
-	border: 1px solid red;
+	background-color: white;
+	height:575px;
+	width:500px;
+	border-radius: 10px;
 	margin: auto;
+	margin-top: 50px;
+	box-shadow: 0 0 10px gray;
 }
+
+.join {
+	background-color: #8DC53F;
+	border-radius: 10px;
+	
+}
+
+
+
 

@@ -59,7 +59,7 @@ public class UserController {
 	) {
 //		IF EMAIL IS NOT FOUND OR IF PASSWORD DOES NOT MATCH
 		if( !userService.authenticateUser(postEmail, postPassword)) {
-			redirectAttributes.addFlashAttribute("error", "INVALID CREDENTIALS");
+			redirectAttributes.addFlashAttribute("error", "Please try again");
 			return "redirect:/login";
 		}
 //		FIND USER FROM DB AND THEN SET USER ID IN SESSION

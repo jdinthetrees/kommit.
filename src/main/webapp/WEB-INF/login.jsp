@@ -56,7 +56,8 @@
 
 <div class="loginform">
     <h3 class="text-light">Sign In</h3>
-    <p><c:out value="${error}" /></p>
+    <p class="mt-3 text-center">Not a member? <a href="/registration">Join us</a>
+    <p class="mt-3 text-center"><c:out value="${error}" /></p>
     <form method="post" action="/login">
         <div class="form-row">
         <div class="col-xs-2 ml-3">
@@ -71,7 +72,7 @@
          </div>
        </div> 
        <div class="mt-3 text-center">
-        <input type="submit" value="Sign In!" class="p-1"/>
+        <input type="submit" value="Sign in" class="p-1 signin text-light"/>
         </div>
     </form> 
     

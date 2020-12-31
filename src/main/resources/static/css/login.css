@@ -12,9 +12,15 @@ body {
 }
 
 .login {
-	background-image: url("https://media.istockphoto.com/vectors/design-of-modern-home-office-designer-workplace-vector-id1135379897");
+	/* background-image: url("https://media.istockphoto.com/vectors/design-of-modern-home-office-designer-workplace-vector-id1135379897");
 	 background-repeat: no-repeat;
   background-size: cover;
+   */
+    background: url('https://media.istockphoto.com/vectors/children-icons-vector-id1133008033?s=2048x2048') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 .loginform {

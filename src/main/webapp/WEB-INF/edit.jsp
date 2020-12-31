@@ -15,7 +15,7 @@
 <body>
 
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="/" class="navbar-brand">kommit.</a>
+        <a href="/events" class="navbar-brand">kommit.</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
             <span class="navbar-toggler-icon"></span>
         </button>

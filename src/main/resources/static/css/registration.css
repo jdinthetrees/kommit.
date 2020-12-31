@@ -8,9 +8,15 @@ padding: 0;
 
 body {
 	
-	background-image: url("https://media.istockphoto.com/vectors/set-of-tools-and-materials-for-handmade-jewelry-beads-accessories-vector-id1153437282?s=2048x2048");
+	/* background-image: url("https://media.istockphoto.com/vectors/set-of-tools-and-materials-for-handmade-jewelry-beads-accessories-vector-id1153437282?s=2048x2048");
 	 background-repeat: no-repeat;
   background-size: cover;
+   */
+    background: url('https://media.istockphoto.com/vectors/set-of-tools-and-materials-for-handmade-jewelry-beads-accessories-vector-id1153437282?s=2048x2048') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
 
 h3{

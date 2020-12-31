@@ -4,6 +4,7 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <%@ page isErrorPage="true" %>   
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -18,25 +19,24 @@
 </head>
 <body>
 
-<div class="container">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/events">kommit.</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/events">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/logout">Log out</a>
-        </li>
-        
-      </ul>
-    </div>
-  </div>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">kommit.</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNav3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="/events" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Log out</a>
+                </li>
+            <!--     <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li> -->
+            </ul>
+        </div>
 </nav>
 
 <div id ="jumbo" class="jumbotron-fluid text-white">
@@ -46,28 +46,31 @@
 	<h6 class="text-left">Welcome <c:out value="${user.firstName}"/></h6>
 	</div>
 </div>
-
- 	<table>
-		<thead>
+<div class="maintable">
+ 	<table class="table table-sm table-striped table-bordered table-hover table-responsive-sm table-responsive-md">
+ 	 
+		<thead class="thead bg-secondary text-light">
 			<tr>
 				<th>Name</th>
 				<th>Date</th>
 				<th>Location</th>
 				<th>Host</th>
 				<th>Action</th>
-				<th>Status</th>
+				
 			</tr>
 		</thead>
 	<tbody>
 			<c:forEach items="${events }" var="event">
+			
 				<tr>
 					<td>
 						<a href="/events/${event.id}" class="btn btn-primary">${event.name }</a>
 					</td>
-					<td>${event.event_date }</td>
+					<td><fmt:formatDate pattern ="MMMM dd, yyyy" value ="${event.date}"/></td>
+					
 					<td>${event.city }, ${event.state }</td>
 					<td>${event.host.firstName}</td>
-					<c:if test = "${ event.host.id == user_id  }">
+					<%-- <c:if test = "${ event.host == user  }">
 					<td>
 						<a href="/events/${event.id}/edit" class="btn btn-primary">Edit</a> |
 						<a href="/events/${event.id}/delete" class="btn btn-danger">Delete</a>
@@ -75,55 +78,67 @@
 					</c:if>
 					<td>
 					 
-					<c:if test = "${ event.host.id !=user_id   }">
+					<c:if test = "${ event.host != user   }">
 					<td>
 						<a href="/events/${event.id}/join" class="btn btn-outline-success">Join</a> |
 						<a href="/events/${event.id}/cancel" class="btn btn-outline-danger">Cancel</a>
 					</td>
-					</c:if> 
-	            <%-- 	<c:choose>
-	            		<c:when test = "${ event.attendees.contains(host) }">
-	            			
-								
-								<span><a href="/events/${event.id}/cancel">Cancel</a></span>
-							
-	            			
-	            		</c:when>
-	            		<c:otherwise>
-	            		<td>
-	            		<a href="/events/${event.id}/join">Join</a> |
-	            		</td>
-	            		</c:otherwise>
-	            	
-	            	
-	            	
-	            	</c:choose>
-	            </td> --%>
+					</c:if>  --%>
+	           
+	            
+	            <c:choose>
+                        <c:when test="${event.host == user}">
+                        <td><a href="/events/${event.id}" class="btn btn-success">Attending</a> | <a href="/events/${event.id}/edit" class="btn btn-primary">Edit</a> | <a href="events/${event.id}/delete" class="btn btn-danger">Delete</a></td>
+                        </c:when>
+                        <c:otherwise>
+                            <c:set var="attending" value="${false}"/>
+                            <c:forEach items="${event.getAttendees()}" var="attendee">
+                             <c:if test="${attendee == user}">
+                                 <c:set var="attending" value="${true}"/>
+                               </c:if>
+                            </c:forEach>
+                            <c:choose>
+                                <c:when test="${attending == false}">
+                                 <td><a href="/events/${event.id}/join" class="btn btn-outline-success">Join</a></td>
+                                </c:when>
+                                <c:otherwise>
+                                 <td><a href="/events/${event.id}" class="btn btn-success">Attending</a>  | <a href="events/${event.id}/cancel" class="btn btn-outline-danger">Cancel</a></td>
+                                </c:otherwise>
+                           </c:choose>
+                        </c:otherwise>
+                        </c:choose>  
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table> 
-	
-
-	<form:form action=" /events/new" method="post" modelAttribute="event">
+</div>
+<div class="createform">
+	<h3 class="text-light">Make your event:</h3>
+	<form:form action="/events" method="post" modelAttribute="event">
 		<form:input path="host" value="${ user_id }" type="hidden"/>
-		<p>
-		<form:label path="name">Event:</form:label>
-		<form:input type="text" path="name" placeholder="Enter your event"/>
-		<form:errors path="name"/>
-		</p>
-		<p>
-		<form:label path="event_date">Event Date:</form:label>
-		<form:input type="date" path="event_date"/>
-		<form:errors path="event_date"/>
-		</p>
-		<p>
-		<form:label path="city">City:</form:label>
-		<form:input type="text" path="city" placeholder="Enter your city"/>
-		<form:errors path="city"/>
-		</p>
-		<p>
-		<form:label path="state">State:</form:label>
+		<div class="form-row">
+		<div class="col-xs-2 ml-4">
+		<form:label path="name"></form:label>
+		<form:input type="text" path="name" class="form-control" placeholder="Enter your event"/>
+		<form:errors path="name" class="text-muted err"/>
+		</div>
+		<div class="col-xs-2 ml-4">
+		<form:label path="description"></form:label>
+		<form:input type="text" path="description" class="form-control" placeholder="Describe your event"/>
+		<form:errors path="description" class="text-muted err"/>
+		</div>
+		<div class="col-xs-2 ml-4">
+		<form:label path="date"></form:label>
+		<form:input type="date" class="form-control" path="date"/>
+		<form:errors path="date" class="text-muted err"/>
+		</div>
+		<div class="col-xs-2 ml-4">
+		<form:label path="city"></form:label>
+		<form:input type="text" path="city" class="form-control" placeholder="Enter your city"/>
+		<form:errors path="city" class="text-muted err"/>
+		</div>
+		<div class="col-xs-2 ml-4">
+		<form:label path="state"></form:label>
 		<form:select  path="state"  class="form-control">
 			        <form:option value ="AL">Alabama</form:option>
                     <form:option value ="AK">Alaska</form:option>
@@ -176,10 +191,14 @@
                     <form:option value ="WI">Wisconsin</form:option>
                     <form:option value ="WY">Wyoming</form:option>       
         </form:select>
-		<form:errors path="state"/>
-		</p>
-		 <input type="submit" value="Create an Event!"/>
+		<form:errors path="state" class="text-muted err"/>
+		</div>
+		 <div class="mt-2 submit text-center">
+		 <input type="submit" value="Submit" class="p-1 create text-light"/>
+		 </div>
+		 </div>
 	</form:form>
+	</div>
 </div>
 
 </body>

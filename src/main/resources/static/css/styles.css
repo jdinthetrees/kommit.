@@ -43,3 +43,49 @@ body {
 #jumbo{
             background-image: url("https://images.unsplash.com/photo-1516571137133-1be29e37143a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=615f2f112cda6c65a2511e9952556680&auto=format&fit=crop&w=1953&q=80")
         }
+        
+        
+h3{
+	background-color: black;
+	padding: 6px;
+	border-radius: 10px 10px 0 0;
+}
+
+.createform {
+	background-color: white;
+	width:245px;
+	height: 570px;
+	margin: auto;
+	margin-top: 75px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px gray;
+	margin-bottom: 25px;
+}
+
+.maintable {
+	margin: auto;
+	border: 4px red solid;
+	padding: 50px;
+	
+	
+}
+
+.create {
+	background-color: #8DC53F;
+	border-radius: 10px;
+}
+
+input, select{
+	margin-top: 15px;
+	
+}
+
+.err {
+	font-size: small;
+	
+}
+
+.submit {
+	
+	margin: auto;
+}

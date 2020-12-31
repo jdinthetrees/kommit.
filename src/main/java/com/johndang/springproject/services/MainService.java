@@ -24,6 +24,10 @@ public class MainService {
 	public List<Event> getAllEvents() {
 		return eventRepository.findAll();
 	}
+	
+	public List<Event> getSchmall() {
+		return eventRepository.findAllByOrderByDateAsc();
+	}
 
 	public Event findEvent(Long id) {
 		

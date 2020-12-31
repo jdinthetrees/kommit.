@@ -14,7 +14,7 @@
 </head>
 <body class="login">
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light">
   
     <a href="/" class="navbar-brand">kommit.</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" >
@@ -32,9 +32,9 @@
       </ul>
     </div>
   
-</nav> 
+</nav>  -->
 
-<!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a href="/" class="navbar-brand">kommit.</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
             <span class="navbar-toggler-icon"></span>
@@ -47,12 +47,12 @@
                 <li class="nav-item">
                     <a href="/login" class="nav-link">Sign In</a>
                 </li>
-                <li class="nav-item">
+               <!--  <li class="nav-item">
                     <a href="#" class="nav-link">Contact</a>
-                </li>
+                </li> -->
             </ul>
         </div>
-</nav> -->
+</nav> 
 
 <div class="loginform">
     <h3 class="text-light">Sign In</h3>

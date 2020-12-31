@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.container {
+	display:flex;
+	justify-content: space-around;
+	
+}
+
+.container3 {
+	width: 400px;
+	margin: auto;
+}

@@ -1,5 +1,10 @@
 package com.johndang.springproject.controllers;
 
+
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -43,6 +48,8 @@ public class MainController {
 	public String front() {
 		return "front.jsp";
 	}
+	
+
 	//creating two step process
 	@GetMapping("/events") 
 	public String index(@ModelAttribute("event") Event emptyEvent, 
@@ -51,7 +58,7 @@ public class MainController {
 		//passing user id to form as host connected to event
 		Long user_id = (Long) session.getAttribute("user_id");
 		User user = userService.findUserById(user_id);
-		List<Event> allEvents = mainService.getAllEvents();
+		List<Event> allEvents = mainService.getSchmall();
 		if(user_id == null)
 			return "redirect:/";
 		model.addAttribute("user", user);
@@ -60,16 +67,17 @@ public class MainController {
 		return "dashboard.jsp";
 	}
 	
-	@PostMapping("events/new")
+	@PostMapping("/events")
 	public String createEvent(@Valid @ModelAttribute("event") Event filledEvent, BindingResult results, 
 			HttpSession session,
 			Model model) {
 		if(results.hasErrors()) {
 			Long user_id = (Long) session.getAttribute("user_id");
+			User user = userService.findUserById(user_id);
 			List<Event> allEvents = mainService.getAllEvents();
 			model.addAttribute("user_id", user_id);
 			model.addAttribute("events", allEvents);
-			
+			model.addAttribute("user", user);
 			return "dashboard.jsp";
 		}
 		//else create a new event, anytime we deal with database we deal with service file
@@ -137,7 +145,7 @@ public class MainController {
 		User user = userService.findUserById(user_id);
 		Event currentEvent = mainService.findEvent(id);
 		mainService.addUsertoEvent(user, currentEvent);
-		return "redirect:/events/{id}";
+		return "redirect:/events";
 	}
 	//cancel event
 	@GetMapping(value="/events/{id}/cancel")

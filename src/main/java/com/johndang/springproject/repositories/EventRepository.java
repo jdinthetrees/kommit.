@@ -11,4 +11,9 @@ import com.johndang.springproject.models.Event;
 public interface EventRepository extends CrudRepository<Event, Long>{
 	List<Event> findAll();
 
+	List<Event> findAllByOrderByDateAsc();
+
+	
+
+	
 }

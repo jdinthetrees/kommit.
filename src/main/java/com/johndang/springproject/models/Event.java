@@ -1,5 +1,6 @@
 package com.johndang.springproject.models;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -30,20 +31,23 @@ public class Event {
 	 @Id
 	    @GeneratedValue(strategy=GenerationType.IDENTITY)
 	    private Long id;
-	 @Size(min=2, max=25, message="Event name must be between 2 and 25 characters")   
+	 @Size(min=2, max=25, message="Event must be at least 2 characters")   
 	 private String name;
 	 @NotNull(message="You must have an event date")
 	 @DateTimeFormat(pattern="yyyy-MM-dd")
-	 private Date event_date;
+	 private Date date;
 	 
 	 
+	 private String description;
 	 
-	 @Size(min = 2, max=25, message="City must have between 2 and 25 characters")
+	 @Size(min = 2, max=25, message="City must be at least 2 characters")
 	 private String city;
 	 @NotNull
 	 private String state;
 	 
-	
+	 @Column(updatable=false)
+	    private Date createdAt;
+	    private Date updatedAt;
 	 
 	 //relationships
 	 @ManyToOne(fetch = FetchType.LAZY)
@@ -62,17 +66,13 @@ public class Event {
 	    private List<User> attendees;
 	 
 	 
-	   @Column(updatable=false)
-	    private Date createdAt;
-	    private Date updatedAt;
+	   
 	    
 	    public Event() {
 	    	this.attendees = new ArrayList<User>();
 	    }
 	    
 	    
-	    
-		
 
 
 		public Long getId() {
@@ -115,8 +115,8 @@ public class Event {
 
 
 
-		public Date getEvent_date() {
-			return event_date;
+		public Date getDate() {
+			return date;
 		}
 
 
@@ -125,8 +125,8 @@ public class Event {
 
 
 
-		public void setEvent_date(Date event_date) {
-			this.event_date = event_date;
+		public void setDate(Date date) {
+			this.date = date;
 		}
 
 
@@ -284,5 +284,19 @@ public class Event {
 	    protected void onUpdate(){
 	        this.updatedAt = new Date();
 	    }
+
+
+
+
+		public String getDescription() {
+			return description;
+		}
+
+
+
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
 
 }

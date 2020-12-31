@@ -14,25 +14,25 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light">
-  
-    <a href="/" class="navbar-brand">kommit.</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/events">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/logout">Log out</a>
-        </li>
-        
-      </ul>
-    </div>
-  
-</nav> 
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">kommit.</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNav3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="/events" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Log out</a>
+                </li>
+            <!--     <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li> -->
+            </ul>
+        </div>
+</nav>
 
 
 <div class="editform">
@@ -51,9 +51,15 @@
 		</div>
 		
 		<div class="col-xs-2 ml-4">
-		<form:label path="event_date"></form:label>
-		<form:input type="date" path="event_date"/>
-		<form:errors path="event_date"/>
+		<form:label path="description"></form:label>
+		<form:input type="text" path="description" class="form-control" placeholder="Describe your event"/>
+		<form:errors path="description" class="text-muted err"/>
+		</div>
+		
+		<div class="col-xs-2 ml-4">
+		<form:label path="date"></form:label>
+		<form:input type="date" path="date"/>
+		<form:errors path="date"/>
 		</div>
 		
 		<div class="col-xs-2 ml-4">

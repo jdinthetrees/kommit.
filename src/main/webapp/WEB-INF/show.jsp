@@ -46,10 +46,10 @@
 <div class="container">
 <div class="container1">
 	<h1> ${event.name }</h1>
-	<h2> <i class="fas fa-user"> </i> ${event.host.firstName }  ${event.host.lastName } </h2>
-	<h2> <i class="fas fa-info-circle"> </i> ${event.description}</h2>
-	<h2> <i class="fas fa-location-arrow"> </i>${event.city },  ${event.state } </h2>
-	<h2> <i class="far fa-calendar-alt"></i> <fmt:formatDate pattern ="MMMM dd, yyyy" value ="${event.date}"/></h2>
+	<h3> <i class="fas fa-user"> </i> ${event.host.firstName }  ${event.host.lastName } </h3>
+	<h3> <i class="fas fa-info-circle"> </i> ${event.description}</h3>
+	<h3> <i class="fas fa-location-arrow"> </i>${event.city },  ${event.state } </h3>
+	<h3> <i class="far fa-calendar-alt"></i> <fmt:formatDate pattern ="MMMM dd, yyyy" value ="${event.date}"/></h3>
 </div>
 
 

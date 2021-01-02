@@ -12,11 +12,25 @@ body {
 	 background-repeat: no-repeat;
   background-size: cover;
    */
-    background: url('https://media.istockphoto.com/vectors/set-of-tools-and-materials-for-handmade-jewelry-beads-accessories-vector-id1153437282?s=2048x2048') no-repeat center center fixed;
+    background: url('https://media.istockphoto.com/vectors/watercolor-abstract-background-with-green-colors-vector-id1293847776?s=2048x2048') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; 
+  background-image:  
+              linear-gradient(to bottom, rgba( 
+                232, 236, 237, 0.62), rgba( 
+                  19, 20, 20, 0.58)), url( 
+'https://media.istockphoto.com/vectors/watercolor-abstract-background-with-green-colors-vector-id1293847776?s=2048x2048');
+  /* background-image:  
+              linear-gradient(to bottom, rgba( 
+                232, 236, 237, 0.62), rgba( 
+                  19, 20, 20, 0.58)), url( 
+'https://media.istockphoto.com/vectors/watercolor-abstract-background-with-green-colors-vector-id1293847776?s=2048x2048'); 
+            width: 100%; 
+             height: 100vh;  
+            background-size: cover;
+} */
 }
 
 h3{
@@ -32,13 +46,15 @@ h3{
 	width:500px;
 	border-radius: 10px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 15vh;
 	box-shadow: 0 0 10px gray;
 }
 
 .join {
-	background-color: #8DC53F;
+	background-color: #208A71;
 	border-radius: 10px;
+	border: none;
+	box-shadow: 0 0 10px gray;
 	
 }
 

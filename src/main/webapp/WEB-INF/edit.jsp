@@ -14,7 +14,7 @@
 </head>
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark">
         <a href="/events" class="navbar-brand">kommit.</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
             <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
 	
 		<div class="col-xs-2 ml-4">
 		<form:label path="name"></form:label>
-		<form:input type="text" path="name"/>
+		<form:input type="text" class="form-control" path="name"/>
 		<form:errors path="name"/>
 		</div>
 		
@@ -58,19 +58,19 @@
 		
 		<div class="col-xs-2 ml-4">
 		<form:label path="date"></form:label>
-		<form:input type="date" path="date"/>
+		<form:input type="date" class="form-control" path="date"/>
 		<form:errors path="date"/>
 		</div>
 		
 		<div class="col-xs-2 ml-4">
 		<form:label path="city"></form:label>
-		<form:input type="text" path="city"/>
+		<form:input type="text" class="form-control" path="city"/>
 		<form:errors path="city"/>
 		</div>
 		
 		<div class="col-xs-2 ml-4">
 		<form:label path="state"></form:label>
-		<form:select path="state">
+		<form:select class="form-control" path="state">
 			        <form:option value ="AL">Alabama</form:option>
                     <form:option value ="AK">Alaska</form:option>
                     <form:option value ="AZ">Arizona</form:option>
@@ -128,7 +128,7 @@
 		
 		</div>
 		<div class="mt-3 text-center">
-		 <input type="submit" value="Edit!" class="p-1 edit text-light"/>
+		 <input type="submit" value="Edit!" class="p-2 edit text-light"/>
 		 </div>
 	</form:form>
 

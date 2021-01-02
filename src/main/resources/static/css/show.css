@@ -7,11 +7,16 @@ padding: 0;
 
 }
 
-#jumbo{
-     background-image: url("https://images.unsplash.com/photo-1516571137133-1be29e37143a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=615f2f112cda6c65a2511e9952556680&auto=format&fit=crop&w=1953&q=80");
-     height: 200px;    
-        }
+body {
+	background:#E7E7E7;
+}
 
+#jumbo{
+            background-image: url("https://media.istockphoto.com/vectors/blue-watercolor-stripes-background-vector-id986442810?s=2048x2048");
+            height: 200px;
+            background-size: cover; 
+}
+        
 
 .container {
 	display:flex;
@@ -23,7 +28,7 @@ padding: 0;
 .container1 {
 	width: 400px;
 	margin: auto;
-	background-color: yellow;
+	background-color: #E7E7E7;
 	border: 1px red solid;
 	border-radius: 10px;
 	padding: 10px;
@@ -32,7 +37,7 @@ padding: 0;
 .container2 {
 	width: 400px;
 	margin: auto;
-	background-color: green;
+	background-color: #E7E7E7;
 	border: 1px red solid;
 	border-radius: 10px;
 	padding: 10px;

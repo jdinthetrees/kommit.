@@ -21,7 +21,7 @@
 </head> 
 <body class="front">
 
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark">
         <a href="/" class="navbar-brand">kommit.</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
             <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
 
 	<div class="tag">
 	
-<h1 class="mt-5 ml-5 front-h1">kommit.</h1>
+<h1 class=" ml-5 front-h1">kommit.</h1>
 
 	</div>
 	

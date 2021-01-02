@@ -7,19 +7,19 @@ padding: 0;
 }
 
 body {
-	background-image: url("https://media.istockphoto.com/photos/shaping-wood-picture-id932128896?s=2048x2048");
+	background-image: url("https://media.istockphoto.com/vectors/watercolor-orange-color-wave-background-vector-id853960160?s=2048x2048");
 	 background-repeat: no-repeat;
   background-size: cover;
 }
 
 h3{
-	background-color: black;
+	background-color: #0c0b0b;
 	padding: 6px;
 	border-radius: 10px 10px 0 0;
 }
 
 nav {
-	background-color:#F5F7F8;
+	background-color:#0c0b0b;
 }
 
 
@@ -27,10 +27,10 @@ nav {
 .editform {
 
 	background-color: white;
-	width:225px;
-	height: 430px;
+	width:240px;
+	height: 570px;
 	margin: auto;
-	margin-top: 75px;
+	margin-top: 10vh;
 	border-radius: 10px;
 	box-shadow: 0 0 10px gray;
 }
@@ -40,6 +40,8 @@ input, select{
 }
 
 .edit {
-	background-color: #8DC53F;
+	background-color: #208A71;
 	border-radius: 10px;
+	border: none;
+	box-shadow: 0 0 10px gray;
 }

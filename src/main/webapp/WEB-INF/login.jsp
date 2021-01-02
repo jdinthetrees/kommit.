@@ -34,7 +34,7 @@
   
 </nav>  -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!--   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a href="/" class="navbar-brand">kommit.</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
             <span class="navbar-toggler-icon"></span>
@@ -47,15 +47,15 @@
                 <li class="nav-item">
                     <a href="/login" class="nav-link">Sign In</a>
                 </li>
-               <!--  <li class="nav-item">
+                <li class="nav-item">
                     <a href="#" class="nav-link">Contact</a>
-                </li> -->
+                </li>
             </ul>
         </div>
-</nav> 
+</nav>  -->
 
 <div class="loginform">
-    <h3 class="text-light">Sign In</h3>
+    <h3 class="text-center"><a href="/" class="text-light">kommit.</a></h3>
     <p class="mt-3 text-center">Not a member? <a href="/registration">Join us</a>
     <p class="mt-3 text-center"><c:out value="${error}" /></p>
     <form method="post" action="/login">

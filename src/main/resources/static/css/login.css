@@ -38,8 +38,8 @@ body {
   -o-background-size: cover; 
   background-image:  
               linear-gradient(to bottom, rgba( 
-                232, 236, 237, 0.1), rgba( 
-                  19, 20, 20, 0.3)), url( 
+                232, 236, 237, 0), rgba( 
+                  19, 20, 20, 0.2)), url( 
 'https://media.istockphoto.com/vectors/watercolor-layered-green-background-vector-id1210320223?s=2048x2048');
 }
 
@@ -54,6 +54,16 @@ body {
 	box-shadow: 0 0 10px gray;
 }
 
+.loginform a {
+	text-decoration: none;
+	color: #32AEA0;
+}
+
+.loginform a:hover {
+	text-decoration: none;
+	color: #5fddc0;
+}
+
 h3{
 	background-color: black;
 	padding: 6px;
@@ -65,8 +75,28 @@ nav {
 }
 
 .signin {
-	background-color: #208A71;
-	border-radius: 10px;
-	border: none;
-	box-shadow: 0 0 10px gray;
+	background-color: #32AEA0;
+	border-radius: 5px;
+	
+	
+}
+
+
+.signin:hover {
+	background-color: #5fddc0;
+	border-radius: 5px;
+	
+	
+}
+
+
+label.hidden {
+	clip:rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin:-1px;
+	overflow:hidden;
+	padding: 0;
+	/* position: absolute; */
 }

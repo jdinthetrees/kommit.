@@ -128,7 +128,7 @@
 		
 		</div>
 		<div class="mt-3 text-center">
-		 <input type="submit" value="Edit!" class="p-2 edit text-light"/>
+		 <input type="submit" value="Edit!"  class="p-1 btn btn-success edit text-light"/>
 		 </div>
 	</form:form>
 

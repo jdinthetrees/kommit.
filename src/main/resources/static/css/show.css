@@ -4,53 +4,126 @@
 * {
 margin: 0;
 padding: 0;
-
+font-family: 'Roboto', sans-serif;
 }
 
+/* html {
+	scroll-behavior: smooth;
+}
+ */
 body {
 	background:#E7E7E7;
 }
 
+a {
+	color: #01937A;
+	font-weight: 300;
+}
+
+nav {
+	background-color:#0c0b0b;
+}
+
 #jumbo{
             background-image: url("https://media.istockphoto.com/vectors/blue-watercolor-stripes-background-vector-id986442810?s=2048x2048");
-            height: 200px;
+            height: 30vh;
             background-size: cover; 
 }
-        
 
-.container {
-	display:flex;
-	justify-content: space-around;
-	padding:25px;
+
+
+.lead {
+	margin-top: 1vh;
+}
+        
+h2{
+	background-color: black;
+	padding:15px; 
+	color: white;
+	/* border-radius: 10px 10px 0 0;  */
+}
+
+
+.info {
+	background-color: #E7E7E7;
+	margin:auto;
+	padding:12px;
 	
 }
 
-.container1 {
+/* .container1 {
 	width: 400px;
 	margin: auto;
+	background-color: #5fddc0;
+	border: 1px red solid;
+	border-radius: 10px;
+	
+} */
+
+.lcontainer1 {
+	background-color: #5fddc0;
+}
+
+.lcontainer2 {
+	background-color: #6dcfd6;
+}
+
+i {
+	color: black;
+	
+}
+
+
+
+ .lcontainer {
+	
+	border: 1px #C2C2C2 solid;
+	padding: 0;
+} 
+
+h3 {
+	padding: 15px;
+}
+/* .container2 {
+	width: 400px;
+	margin: auto;
+	background-color: #6dcfd6;
+	border: 1px red solid;
+	border-radius: 10px;
+	
+} */
+
+span {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+/* .container3 {
+	width: 400px;
+	margin: auto;
+		background-color: #3deaf7;
+	border: 1px red solid;
+	border-radius: 10px;
+
+} */
+
+.lcontainer3 {
+	
+	
+	background-color: #3deaf7;
+	
+	
+
+}
+
+
+.container4 {
+	
 	background-color: #E7E7E7;
-	border: 1px red solid;
-	border-radius: 10px;
-	padding: 10px;
+	padding: 12px;
+	border: 4px #C2C2C2 solid;
 }
-
-.container2 {
-	width: 400px;
-	margin: auto;
-	background-color: #E7E7E7;
-	border: 1px red solid;
-	border-radius: 10px;
-	padding: 10px;
+footer {
+	background-color:#0c0b0b;
+	height: 76px;
 }
-
-
-
-.container3 {
-	width: 400px;
-	margin: auto;
-		background-color: skyblue;
-	border: 1px red solid;
-	border-radius: 10px;
-	padding: 10px;
-}
-

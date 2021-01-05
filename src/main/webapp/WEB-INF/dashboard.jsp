@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+    pageEncoding="UTF-8"%>   
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> 
 <%@ page isErrorPage="true" %>   
@@ -18,7 +17,7 @@
  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
 <title>dashboard</title>
 </head>
-<body>
+<body class="dashboard">
 
 <nav class="navbar navbar-expand-lg navbar-dark">
         <a href="/events" class="navbar-brand">kommit.</a>
@@ -33,19 +32,18 @@
                 <li class="nav-item">
                     <a href="/logout" class="nav-link">Log out</a>
                 </li>
-            <!--     <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li> -->
             </ul>
         </div>
 </nav>
 
 <div id ="jumbo" class="jumbotron-fluid text-white">
 	<div class="container">
-	<h1 class="disply-4">Make things</h1>
-	<p class="lead">Imagine if you can spend time with friends and family.</p>
+	<!-- <h1 class="disply-4">Make things</h1> -->
+	<h6 class="lead py-5 display-4">kommit. to spending time with friends and family.</h6>
 	<h6 class="text-left">Welcome <c:out value="${user.firstName}"/></h6>
 	</div>
+	
+	
 	<div class="formcontainer d-flex justify-content-center">
 	<div class="createform2 col-11 ">
 
@@ -61,17 +59,17 @@
 		
 	
 		<form:label path="description"></form:label>
-		<form:input type="text" path="description" class="form-control form-control col-2 ml-2" placeholder="Describe your event"/>
+		<form:input type="text" path="description" class=" form-control col-2 ml-2" placeholder="Describe your event"/>
 		
 	
 		
 		<form:label path="date"></form:label>
-		<form:input type="date" class="form-control form-control col-2 ml-2" path="date"/>
+		<form:input type="date" class="form-control col-2 ml-2" path="date"/>
 		
 		
 	
 		<form:label path="city"></form:label>
-		<form:input type="text" path="city" class="form-control form-control col-2 ml-2" placeholder="Enter your city"/>
+		<form:input type="text" path="city" class="form-control col-2 ml-2" placeholder="Enter your city"/>
 		
 		
 		
@@ -132,7 +130,7 @@
 		<form:errors path="state" class="text-muted err"/>
 	
 		 <div class=" submit text-center"> 
-		 <input type="submit" value="Create event" class="p-1 mt-1 ml-2 create text-light"/>
+		 <input type="submit" value="Create event" class="btn btn-success ml-2 create text-light"/>
 		
 	 </div> 
 	 
@@ -192,7 +190,7 @@
 	            
 	            <c:choose>
                         <c:when test="${event.host == user}">
-                        <td><a href="/events/${event.id}" class="btn btn-sm btn-success attend">Attending</a> | <a href="/events/${event.id}/edit" class="btn btn-sm btn-primary edit">Edit</a> | <a href="events/${event.id}/delete" class="btn btn-sm btn-danger delete">Delete</a></td>
+                        <td><a href="/events/${event.id}" class="btn btn-sm btn-success ml-3 attend">Attending</a>  <a href="/events/${event.id}/edit" class="btn btn-sm btn-primary ml-3 edit">Edit</a>  <a href="events/${event.id}/delete" class="btn btn-sm btn-danger ml-3 delete">Delete</a></td>
                         </c:when>
                         <c:otherwise>
                             <c:set var="attending" value="${false}"/>
@@ -203,10 +201,10 @@
                             </c:forEach>
                             <c:choose>
                                 <c:when test="${attending == false}">
-                                 <td><a href="/events/${event.id}/join" class="btn btn-sm btn-outline-success">Join</a></td>
+                                 <td><a href="/events/${event.id}/join" class="btn btn-sm kommit btn-outline-success ml-3">kommit.</a></td>
                                 </c:when>
                                 <c:otherwise>
-                                 <td><a href="/events/${event.id}" class="btn btn-sm btn-success">Attending</a>  | <a href="events/${event.id}/cancel" class="btn btn-sm btn-outline-danger">Cancel</a></td>
+                                 <td><a href="/events/${event.id}" class="btn btn-sm btn-success ml-3 attend">Attending</a>   <a href="events/${event.id}/cancel" class="btn btn-sm btn-outline-danger ml-3 cancel">Cancel</a></td>
                                 </c:otherwise>
                            </c:choose>
                         </c:otherwise>
@@ -216,6 +214,12 @@
 		</tbody>
 	</table> 
 </div>
+
+<footer class="d-flex flex-row justify-content-end align-items-center">
+
+<a href="/events" class="navbar-brand text-light">kommit.</a> <p class="mt-3 mr-5 text-secondary">to the people you care about most</p>
+
+</footer>
 <%-- <div class="createform">
 	<h3 class="text-light">Make your event:</h3>
 	<form:form action="/events" method="post" modelAttribute="event">
@@ -307,7 +311,12 @@
 	
 	 --%>
 	
-	
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
 	
 
 

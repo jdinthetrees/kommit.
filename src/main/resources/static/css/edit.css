@@ -39,9 +39,19 @@ input, select{
 	margin-top: 15px;
 }
 
-.edit {
+/* .edit {
 	background-color: #208A71;
 	border-radius: 10px;
 	border: none;
 	box-shadow: 0 0 10px gray;
+} */
+
+.edit {
+	background-color: #6dcfd6;
+	width: 76px;
+	border-radius: 10px;
+}
+
+.edit:hover {
+	background-color: #3deaf7;
 }

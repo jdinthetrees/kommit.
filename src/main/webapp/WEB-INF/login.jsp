@@ -61,18 +61,18 @@
     <form method="post" action="/login">
         <div class="form-row">
         <div class="col-xs-2 ml-3">
-            <label for="email"></label>
+            <label for="email" class="hidden"></label>
             <input type="text" id="email" name="email" class="form-control" placeholder="Enter your email"/>
         </div>
        </div> 
          <div class="form-row">
         <div class="col-xs-2 ml-3">
-            <label for="password"></label>
+            <label for="password" class="hidden"></label>
             <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password"/>
          </div>
        </div> 
        <div class="mt-3 text-center">
-        <input type="submit" value="Sign in" class="p-1 signin text-light"/>
+        <input type="submit" value="Sign in" class="p-1 btn btn-success signin text-light"/>
         </div>
     </form> 
     

@@ -7,9 +7,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-     <link rel="stylesheet" type="text/css" href="css/registration.css">
+
+ <link rel="stylesheet" type="text/css" href="/css/registration.css">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    
      <title>Registration Page</title>
 </head>
 <body>
@@ -61,26 +63,26 @@
     <form:form method="POST" action="/registration" modelAttribute="user">
     	<div class="form-row">
     	<div class="form-group col-md-5 ml-4">
-            <form:label path="firstName"></form:label>
+            <form:label path="firstName" class="hidden"> First Name</form:label>
             <form:input path="firstName" class="form-control" placeholder="Enter your first name"/>
         </div>
        
         
         <div class="form-group col-md-5 ml-4">
-            <form:label path="lastName"></form:label>
+            <form:label path="lastName" class="hidden">Last Name</form:label>
             <form:input path="lastName" class="form-control" placeholder="Enter your last name"/>
         </div>
         
         
         <div class="form-group col-md-5 ml-4">
-            <form:label path="city"></form:label>
+            <form:label path="city" class="hidden">City</form:label>
             <form:input type="test" path="city" class="form-control" placeholder="Enter your city"/>
         </div>
        
         
        
         <div class="form-group col-md-5 ml-4">
-        	<form:label path = "state"></form:label>
+        	<form:label path = "state" class="hidden">State</form:label>
             <form:select path="state" class="form-control">
             	 	<form:option value ="AL">Alabama</form:option>
                     <form:option value ="AK">Alaska</form:option>
@@ -139,26 +141,26 @@
     
        
         <div class="form-group col-md-10 ml-4">
-            <form:label path="email"></form:label>
+            <form:label path="email" class="hidden">Email</form:label>
             <form:input type="email" path="email" class="form-control" placeholder="Enter your email"/>
          </div>
        
      
         <div class="form-group col-md-5 ml-4">
-            <form:label path="password"></form:label>
+            <form:label path="password" class="hidden">Password</form:label>
             <form:password path="password" class="form-control" placeholder="Enter your password"/>
           </div>
        
         
        <div class="form-group col-md-5 ml-4">
-            <form:label path="passwordConfirmation"></form:label>
+            <form:label path="passwordConfirmation" class="hidden"></form:label>
             <form:password path="passwordConfirmation" class="form-control" placeholder="Confirm your password"/>
          </div>
          
        </div>
        
         <div class="mt-3 text-center">
-        <input type="submit" value="Register!" class="p-1 join text-light" />
+        <input type="submit" value="kommit." class=" p-1 join text-light" />
        </div>
        
     </form:form>

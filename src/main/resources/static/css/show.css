@@ -25,16 +25,16 @@ nav {
 }
 
 #jumbo{
-            background-image: url("https://media.istockphoto.com/photos/abstract-modern-painting-dry-brush-painted-paper-canvas-wall-colorful-picture-id1201612011?s=2048x2048");
-            height: 10vh;
+            background-image: url("/images/front.jpg");
+            height: 20vh;
             background-size: cover; 
 }
 
 
 
-.lead {
+/* .lead {
 	margin-top: 1vh;
-}
+} */
         
 h3{
 	background-color: black;
@@ -143,4 +143,6 @@ span {
 footer {
 	background-color:#0c0b0b;
 	height: 76px;
+	margin-top: 14vh;
+	
 }

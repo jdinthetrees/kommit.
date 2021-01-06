@@ -10,7 +10,7 @@ body {
 /* 	background-image: url("https://media.istockphoto.com/vectors/watercolor-orange-color-wave-background-vector-id853960160?s=2048x2048");
 	 background-repeat: no-repeat;
   background-size: cover; */
-   background: url('https://media.istockphoto.com/photos/abstract-modern-painting-dry-brush-painted-paper-canvas-wall-textured-picture-id1192095875?s=2048x2048') no-repeat center center fixed;
+   background: url('/images/front.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -46,12 +46,6 @@ input, select{
 	margin-top: 10px;
 }
 
-/* .edit {
-	background-color: #208A71;
-	border-radius: 10px;
-	border: none;
-	box-shadow: 0 0 10px gray;
-} */
 
 .edit {
 	background-color: #6dcfd6;

@@ -22,7 +22,7 @@
 </head> 
 <body class="front">
 
- <nav class="navbar navbar-expand-lg navbar-dark">
+ <nav class="navbar navbar-fluid navbar-expand-lg navbar-dark">
         <a href="/" class="navbar-brand">kommit.</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
             <span class="navbar-toggler-icon"></span>

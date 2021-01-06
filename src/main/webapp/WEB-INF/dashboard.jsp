@@ -218,7 +218,7 @@
 	</table> 
 </div>
 
-<footer class="d-flex flex-row justify-content-end align-items-center">
+<footer class="d-flex flex-row justify-content-end align-items-center dfooter">
 
 <a href="/events" class="navbar-brand text-light">kommit.</a> <p class="mt-3 mr-5 text-secondary">to the people you care about most</p>
 

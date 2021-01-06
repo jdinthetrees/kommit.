@@ -7,9 +7,8 @@ font-family: 'Roboto', sans-serif;
 }
 
 body {
-	background: #E7E7E7; 
-	/* background: #B2E1EA; */
-	
+	background: #E7E7E7;  
+
 }
 
 a {
@@ -19,54 +18,26 @@ a {
 
 a:hover {
 	color: #00705b;
-	/* background-color: #00705b; */
 	text-decoration: none;
 }
 
 
 .front {
-	/* background-color: #5fddc0; */
-	   background: url('https://media.istockphoto.com/photos/abstract-modern-painting-dry-brush-painted-paper-canvas-wall-textured-picture-id1192095875?s=2048x2048') no-repeat center center fixed;
+
+	   background: url('/images/front.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover; 
  
-/*    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('https://media.istockphoto.com/vectors/watercolor-mountains-green-vector-id1174820578?s=2048x2048') no-repeat center center fixed;
- */    /*  background-image:
-    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
-    url('https://media.istockphoto.com/vectors/watercolor-mountains-green-vector-id1174820578?s=2048x2048');
-    width: 80%;
-    height: 400px;
-    background-size: cover;
-    color: white;
-    padding: 20px; */
-   
-/*  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover; */
-/*   background:linear-gradient(#004092, #020202, transparent),  url('https://media.istockphoto.com/vectors/watercolor-texture-vector-id482278619?s=2048x2048') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-   background-size: cover; 
-  -o-background-size: cover; 
-   
-  
-    /*         background-image:  
-              linear-gradient(to bottom, rgba( 
-                232, 236, 237, 0), rgba( 
-                  19, 20, 20, 0.2)), url( 
-'https://media.istockphoto.com/vectors/watercolor-texture-vector-id482278619?s=2048x2048'); 
-            width: 100%; 
-             height: 100vh;  
-            background-size: cover; */
+
         
   
 }
 
 nav {
 	background-color:#0c0b0b;
+	
 }
 
 
@@ -75,7 +46,8 @@ nav {
 	
 	font-size: 700%;
 	font-weight: 900;
-	margin-top: 25vh;
+	margin-top: 25vh; 
+	/* margin-top: 450px; */
 	
 }
 
@@ -85,6 +57,7 @@ nav {
 	
 	font-size: 20px;
 	font-weight: 300; 
+	
 }
 
 
@@ -96,23 +69,32 @@ nav {
 	
 }
 
-.tag {
-	margin-top: 150px;
+.frontfoot {
+	
+	height: 76px; 
+	background-color:#0c0b0b;
+	position: fixed;
+	width: 100%;
+    left: 0;
+    bottom: 0;
+	
 }
 
 
 
+/* .tag {
+	margin-top: 150px;
+}
+ */
+
+
 #jumbo{
-            background-image: url("https://media.istockphoto.com/photos/abstract-modern-painting-dry-brush-painted-paper-canvas-wall-colorful-picture-id1201612011?s=2048x2048");
-            height: 30vh;
+            background-image: url("/images/banner.jpg");
+            height: 20vh;
             background-size: cover; 
             
-    /*           background: url('https://media.istockphoto.com/vectors/watercolor-blue-abstract-background-vector-id874406474?s=2048x2048') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover; */
-        }
+
+}
         
     
 h3{
@@ -147,31 +129,33 @@ h3{
 .formcontainer {
 	margin-top: 15px;
 	
+
 } 
 
 .maintable {
 	margin: auto;
 	border: 4px #C2C2C2 solid;
 	padding: 25px;
-	
+	background-color: #E7E7E7;
 	
 }
 
+.dashboard {
+
+  background-color: #D8D8D8;
+	
+}
+
+
+
 thead {
-	
 	background-color:#212121;
-	
-	
 	color:#C2C2C2;
-	
 }
 
 .create {
 	background-color: #32AEA0;
 	border-radius: 5px;
-	
-	
-	
 }
 
 .create:hover {
@@ -228,15 +212,11 @@ thead {
 	background-color: #ffd400;
 }
 
- footer {
+ .dfooter {
 	height: 76px; 
 	background-color:#0c0b0b;
-}
- 
-.frontfoot {
-	
-	background-color:#0c0b0b;
-	height: 76px;
-	margin-top: 45vh;
-	
-}
+	position: fixed;
+	width: 100%;
+    left: 0;
+    bottom: 0;
+ }

@@ -180,7 +180,7 @@
  </table>
   <form action="/events/${event.id}/newComment" method="post">
     	<span class="ml-3">Add Comment:</span><br/>
-    	<textarea name="comment" class="textarea ml-3" rows="3"></textarea>
+    	<textarea name="comment" class="textarea ml-3" rows="3"></textarea><br>
     	<button class="btn btn-sm btn-success submit ml-3 mt-2 mb-2">Submit</button>
     </form>
  

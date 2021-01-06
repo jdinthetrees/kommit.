@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="/css/edit.css">
 <meta charset="UTF-8">
@@ -36,7 +37,7 @@
 
 
 <div class="editform">
-	<h3 class="text-light">Edit your event</h3>
+	<h3 class="text-light text-center">  Edit your event</h3>
 
 		<form:form action="/events/${event.id }/edit" method="post" modelAttribute="event">
 		<input type="hidden" name="_method" value="put"/>
@@ -44,31 +45,31 @@
 		
 		<div class="form-row">
 	
-		<div class="col-xs-2 ml-4">
+		<div class="col-10 ml-4">
 		<form:label path="name"></form:label>
 		<form:input type="text" class="form-control" path="name"/>
 		<form:errors path="name"/>
 		</div>
 		
-		<div class="col-xs-2 ml-4">
+		<div class="col-10 ml-4">
 		<form:label path="description"></form:label>
 		<form:input type="text" path="description" class="form-control" placeholder="Describe your event"/>
 		<form:errors path="description" class="text-muted err"/>
 		</div>
 		
-		<div class="col-xs-2 ml-4">
+		<div class="col-10 ml-4">
 		<form:label path="date"></form:label>
 		<form:input type="date" class="form-control" path="date"/>
 		<form:errors path="date"/>
 		</div>
 		
-		<div class="col-xs-2 ml-4">
+		<div class="col-10 ml-4">
 		<form:label path="city"></form:label>
 		<form:input type="text" class="form-control" path="city"/>
 		<form:errors path="city"/>
 		</div>
 		
-		<div class="col-xs-2 ml-4">
+		<div class="col-10 ml-4">
 		<form:label path="state"></form:label>
 		<form:select class="form-control" path="state">
 			        <form:option value ="AL">Alabama</form:option>

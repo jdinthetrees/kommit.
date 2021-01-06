@@ -9,6 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
  <link rel="stylesheet" type="text/css" href="/css/show.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
@@ -35,9 +36,9 @@
 
 <div id ="jumbo" class="jumbotron-fluid text-white py-5">
 	<!-- <div class="container"> -->
-	<h1 class="headertag ml-5 display-4">Share things</h1>
-	<p class="lead d-flex justify-content-end mr-5">let them know what you are up to.</p>
-	<%-- <h6 class="text-left">Welcome <c:out value="${user.firstName}"/></h6> --%>
+	<!-- <h1 class="headertag ml-5 display-4">Share things</h1> -->
+<!-- 	<p class="lead d-flex justify-content-end mr-5">let them know what you are up to.</p>
+ -->	<%-- <h6 class="text-left">Welcome <c:out value="${user.firstName}"/></h6> --%>
 	<!-- </div> -->
 </div>
 
@@ -137,17 +138,17 @@
 	<div class="center">
 	<div class="container4 container-fluid d-flex flex-row flex-fill align-self-stretch justify-content-between">
 	<div class="lcontainer lcontainer1 col-4">
-	<h2> ${event.name }</h2>
-	<h3> <i class="fas fa-user"> </i> ${event.host.firstName }  ${event.host.lastName } </h3>
-	<h3> <i class="fas fa-info-circle"> </i> ${event.description}</h3>
-	<h3> <i class="fas fa-location-arrow"> </i>${event.city },  ${event.state } </h3>
-	<h3> <i class="far fa-calendar-alt"></i> <fmt:formatDate pattern ="MMMM dd, yyyy" value ="${event.date}"/></h3>
+	<h3> ${event.name }</h3>
+	<h4> <i class="fas fa-user"> </i>  ${event.host.firstName }  ${event.host.lastName } </h4>
+	<h4> <i class="fas fa-info-circle"> </i>  ${event.description}</h4>
+	<h4> <i class="fas fa-location-arrow"> </i>  ${event.city },  ${event.state } </h4>
+	<h4> <i class="far fa-calendar-alt"></i> <fmt:formatDate pattern ="MMMM dd, yyyy" value = "${event.date}"/></h4>
 	 
 	 </div>
 	 
 	 <div class="lcontainer lcontainer2 col-4">
 <table class="table table-striped">
-	<h2>Who's coming:</h2>
+	<h3>Who's coming:</h3>
 	   <!--  <thead class="thead bg-secondary text-light">
 	        <tr>
 	            <th>Name</th>
@@ -168,19 +169,19 @@
 	
 	<div class="lcontainer lcontainer3 col-4">
 	<table class="table table-striped">
-	<h2><i class="far fa-comments"></i> Comments</h2>
+	<h3><i class="far fa-comments"></i> Comments</h3>
 	<tbody>
 	<c:forEach items="${event.comments}" var="comment">
 	<tr>
-       	<td><i class="far fa-comment"></i> <c:out value="${comment.user.firstName} says: ${comment.comment}"/></td>
+       	<td><i class="far fa-comment ml-1"></i> <c:out value="${comment.user.firstName} says: ${comment.comment}"/></td>
        	</tr>
     </c:forEach>
    </tbody>
  </table>
   <form action="/events/${event.id}/newComment" method="post">
-    	<span>Add Comment:</span><br/>
-    	<textarea name="comment" class="form-control" rows="3"></textarea>
-    	<button>Submit</button>
+    	<span class="ml-3">Add Comment:</span><br/>
+    	<textarea name="comment" class="textarea ml-3" rows="3"></textarea>
+    	<button class="btn btn-sm btn-success submit ml-3 mt-2 mb-2">Submit</button>
     </form>
  
  </div>

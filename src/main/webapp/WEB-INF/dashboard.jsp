@@ -39,8 +39,8 @@
 <div id ="jumbo" class="jumbotron-fluid text-white">
 	<div class="container">
 	<!-- <h1 class="disply-4">Make things</h1> -->
-	<h6 class="lead py-5 display-4">kommit. to spending time with friends and family.</h6>
-	<h6 class="text-left">Welcome <c:out value="${user.firstName}"/></h6>
+	<h1 class="lead">kommit. to spending time with friends and family.</h1>
+	<%-- <p class="welcome text-left ml-5 text-dark">Welcome, <c:out value="${user.firstName}"/>. These are your events:</p> --%>
 	</div>
 	
 	
@@ -148,7 +148,10 @@
 </div>
 
 
+
 <div class="maintable">
+
+<p class="welcome text-left ml-5 text-dark">Welcome, <c:out value="${user.firstName}"/>. These are your events:</p>
  	<table class="table table-sm table-striped table-bordered table-hover table-responsive-sm table-responsive-md">
  	 
 		<thead class="thead">

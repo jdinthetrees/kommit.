@@ -12,16 +12,16 @@ body {
 	 background-repeat: no-repeat;
   background-size: cover;
    */
-    background: url('https://media.istockphoto.com/vectors/watercolor-abstract-background-with-green-colors-vector-id1293847776?s=2048x2048') no-repeat center center fixed;
+    background: url('https://media.istockphoto.com/photos/modern-drawing-in-green-and-blue-tones-vibrant-paint-smudges-isolated-picture-id1210668784?s=2048x2048') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover; 
-  background-image:  
+ /*  background-image:  
               linear-gradient(to bottom, rgba( 
                 232, 236, 237, 0.1), rgba( 
                   19, 20, 20, 0.3)), url( 
-'https://media.istockphoto.com/vectors/watercolor-abstract-background-with-green-colors-vector-id1293847776?s=2048x2048');
+'https://media.istockphoto.com/vectors/watercolor-abstract-background-with-green-colors-vector-id1293847776?s=2048x2048'); */
   /* background-image:  
               linear-gradient(to bottom, rgba( 
                 232, 236, 237, 0.62), rgba( 

@@ -141,8 +141,10 @@ span {
 	border: 4px #C2C2C2 solid;
 }
 footer {
+	height: 76px; 
 	background-color:#0c0b0b;
-	height: 76px;
-	margin-top: 14vh;
-	
+	position: fixed;
+	width: 100%;
+    left: 0;
+    bottom: 0;
 }

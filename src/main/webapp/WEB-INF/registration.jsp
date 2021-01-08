@@ -16,45 +16,7 @@
      <title>Registration Page</title>
 </head>
 <body>
-<!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
-    <a href="/" class="navbar-brand">kommit.</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/registration">Join</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Sign In</a>
-        </li>
-        
-      </ul>
-    </div>
-  
-</nav>  -->
 
-<!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="/" class="navbar-brand">kommit.</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav3">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="myNav3">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="/registration" class="nav-link">Join</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/login" class="nav-link">Sign In</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-            </ul>
-        </div>
-</nav> -->
 
 <div class="registerform">
       <h3 class="text-center"><a href="/" class="text-light">kommit.</a></h3>

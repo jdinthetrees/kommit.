@@ -35,104 +35,8 @@
 </nav>
 
 <div id ="jumbo" class="jumbotron-fluid text-white py-5">
-	<!-- <div class="container"> -->
-	<!-- <h1 class="headertag ml-5 display-4">Share things</h1> -->
-<!-- 	<p class="lead d-flex justify-content-end mr-5">let them know what you are up to.</p>
- -->	<%-- <h6 class="text-left">Welcome <c:out value="${user.firstName}"/></h6> --%>
-	<!-- </div> -->
 </div>
 
-<%-- <div class="d-flex justify-content-center p-5 info">
-<div class="container1">
-	<h2> ${event.name }</h2>
-	<h3> <i class="fas fa-user"> </i> ${event.host.firstName }  ${event.host.lastName } </h3>
-	<h3> <i class="fas fa-info-circle"> </i> ${event.description}</h3>
-	<h3> <i class="fas fa-location-arrow"> </i>${event.city },  ${event.state } </h3>
-	<h3> <i class="far fa-calendar-alt"></i> <fmt:formatDate pattern ="MMMM dd, yyyy" value ="${event.date}"/></h3>
-	 <table class="table table-striped">
-	<h2>Who's coming:</h2>
-	   <!--  <thead class="thead bg-secondary text-light">
-	        <tr>
-	            <th>Name</th>
-	            
-	        </tr>
-	    </thead> -->
-	    <tbody>
-	        <c:forEach items="${event.attendees}" var="attendee">
-		        <tr>
-		        
-		        	<td class="d-flex flex-row"><i class="fas fa-user"> <span><c:out value="${attendee.firstName} ${attendee.lastName}"/></span></td>
-		   
-	            </tr> 
-            </c:forEach>
-	    </tbody>
-</table>
-<table class="table table-striped">
-	<h2><i class="far fa-comments"></i> Comments</h2>
-	<tbody>
-	<c:forEach items="${event.comments}" var="comment">
-	<tr>
-       	<td><i class="far fa-comment"></i> <c:out value="${comment.user.firstName} says: ${comment.comment}"/></td>
-       	</tr>
-    </c:forEach>
-   </tbody>
- </table>
-  <form action="/events/${event.id}/newComment" method="post">
-    	<span>Add Comment:</span><br/>
-    	<textarea name="comment" class="form-control" rows="3"></textarea>
-    	<button>Submit</button>
-    </form>
-</div>
-
-<div class="container1">
-<h2> ${event.name }</h2>
-	<h3> <i class="fas fa-user"> </i> ${event.host.firstName }  ${event.host.lastName } </h3>
-	<h3> <i class="fas fa-info-circle"> </i> ${event.description}</h3>
-	<h3> <i class="fas fa-location-arrow"> </i>${event.city },  ${event.state } </h3>
-	<h3> <i class="far fa-calendar-alt"></i> <fmt:formatDate pattern ="MMMM dd, yyyy" value ="${event.date}"/></h3>
-	 
-</div>
-
-<div class="container2">
-<table class="table table-striped">
-	<h2>Who's coming:</h2>
-	   <!--  <thead class="thead bg-secondary text-light">
-	        <tr>
-	            <th>Name</th>
-	            
-	        </tr>
-	    </thead> -->
-	    <tbody>
-	        <c:forEach items="${event.attendees}" var="attendee">
-		        <tr>
-		        
-		        	<td class="d-flex flex-row"><i class="fas fa-user"> <span><c:out value="${attendee.firstName} ${attendee.lastName}"/></span></td>
-		   
-	            </tr> 
-            </c:forEach>
-	    </tbody>
-</table>
-	</div>
-	
-	<div class="container3">
-	<table class="table table-striped">
-	<h2><i class="far fa-comments"></i> Comments</h2>
-	<tbody>
-	<c:forEach items="${event.comments}" var="comment">
-	<tr>
-       	<td><i class="far fa-comment"></i> <c:out value="${comment.user.firstName} says: ${comment.comment}"/></td>
-       	</tr>
-    </c:forEach>
-   </tbody>
- </table>
-  <form action="/events/${event.id}/newComment" method="post">
-    	<span>Add Comment:</span><br/>
-    	<textarea name="comment" class="form-control" rows="3"></textarea>
-    	<button>Submit</button>
-    </form>
- 
- </div>
-	 --%>
 	
 	</div>
 	<div class="center">
@@ -149,12 +53,7 @@
 	 <div class="lcontainer lcontainer2 col-4">
 <table class="table table-striped">
 	<h3>Who's coming:</h3>
-	   <!--  <thead class="thead bg-secondary text-light">
-	        <tr>
-	            <th>Name</th>
-	            
-	        </tr>
-	    </thead> -->
+	
 	    <tbody>
 	        <c:forEach items="${event.attendees}" var="attendee">
 		        <tr>
